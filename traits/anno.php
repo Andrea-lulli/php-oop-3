@@ -9,12 +9,3 @@ trait anno
         return "$this->anno";
     }
 }
-
-
-
-
-
-
-
-
-?>

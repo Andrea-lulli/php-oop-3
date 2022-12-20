@@ -10,12 +10,3 @@ trait Formato
         return "$this->formato $this->tipo -  $this->dimensioni";
     }
 }
-
-
-
-
-
-
-
-
-?>
