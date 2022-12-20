@@ -3,6 +3,7 @@
 include_once __DIR__ . '/classi/generi.php';
 include_once __DIR__ . '/classi/libro.php';
 include_once __DIR__ . '/classi/audiolibro.php';
+include_once __DIR__ . '/classi/cd.php';
 
 
 $generi = [
@@ -14,12 +15,14 @@ var_dump( $generi );
 $prodotti = [
   new Libro( 'La scelta di Natan', 'Antonio Puccio', 23.40, $generi['giallo'], true, 'https://immagine-copertina.com', 250, 'flessibile' ),
   new audioLibro('La scelta di Natan', 'Antonio Puccio', 23.40, $generi['giallo'], true, 'https://immagine-copertina.com', 120, 'spotify', 'https://spotify-libri.com'),
+    new cd('Queen Greatest', 'QUEEN ', 27.99, 'https://immagine-copertina.com', '1989', 'Rock'),
 ];
 
 $prodotti[1]->formato = "digitale";
 $prodotti[1]->tipo = "PDF";
 $prodotti[1]->dimensioni = "251kb";
 $prodotti[0]->formato = "copertina flessibile";
+$prodotti[2]->formato = "CD";
 
 var_dump( $prodotti );
 

@@ -7,7 +7,7 @@ trait Formato
     public $dimensioni;
 
     public function getFormat(){
-        return "$this->formato $this->ftipo -  $this->dimensioni";
+        return "$this->formato $this->tipo -  $this->dimensioni";
     }
 }
 
