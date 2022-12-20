@@ -5,6 +5,7 @@ include_once __DIR__ . '/classi/libro.php';
 include_once __DIR__ . '/classi/audiolibro.php';
 include_once __DIR__ . '/classi/cd.php';
 include_once __DIR__ . '/classi/addetti.php';
+include_once __DIR__ . '/traits/anno.php';
 
 
 $generi = [
@@ -28,13 +29,13 @@ $dipendenti = [
 ];
 
 
-
+//trait per i dipendenti - anno di nascita 
 $dipendenti[0]->anno = "1987";
 $dipendenti[1]->anno = "1991";
 $dipendenti[2]->anno = "1978";
 $dipendenti[3]->anno = "1968";
 
-
+//trait per i prodotti - formato , tipo , dim
 $prodotti[1]->formato = "digitale";
 $prodotti[1]->tipo = "PDF";
 $prodotti[1]->dimensioni = "251kb";
@@ -46,17 +47,23 @@ var_dump($prodotti);
 
 var_dump($dipendenti);
 
-// foreach( $prodotti as $elem ){
-//   echo get_class($elem);
-//   echo "<br>";
-//}
+
+//array delle valutazioni
 $valutazione = [
   $dipendenti[1]->valutazione,
   $dipendenti[2]->valutazione,
   $dipendenti[3]->valutazione
 ];
 
+// per travare il numero massimo nell'array delle valutazioni
 $massimo = max($valutazione);
+
+// funzione per gli errori con Exception
+try {
+  $dipendenti[0]->setValutazione('-1');
+} catch (Exception $e) {
+  echo "si è verificato un errore:"  . $e->getMessage();
+}
 ?>
 
 

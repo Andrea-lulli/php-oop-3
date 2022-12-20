@@ -1,5 +1,5 @@
 <?php
-
+//trait per implementare gli argomenti nella classe prodotti
 trait Formato
 {
     public $formato;

@@ -26,4 +26,15 @@ class addetti  {
     
     
   }
+
+  //funzione per gli erroti in php 
+  public function setValutazione($valutazione){
+    if (!is_numeric($valutazione)) {
+        throw new Exception('attenzione non è un numero');
+    }else if( $valutazione < 0 ){
+            throw new Exception('attenzione numero negativo');  
+    }
+    
+
+}
 }
