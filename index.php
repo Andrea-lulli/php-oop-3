@@ -16,6 +16,11 @@ $prodotti = [
   new audioLibro('La scelta di Natan', 'Antonio Puccio', 23.40, $generi['giallo'], true, 'https://immagine-copertina.com', 120, 'spotify', 'https://spotify-libri.com'),
 ];
 
+$prodotti[1]->formato = "digitale";
+$prodotti[1]->tipo = "PDF";
+$prodotti[1]->dimensioni = "251kb";
+$prodotti[0]->formato = "copertina flessibile";
+
 var_dump( $prodotti );
 
 foreach( $prodotti as $elem ){

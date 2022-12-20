@@ -1,8 +1,10 @@
 <?php
 
 include_once __DIR__ . '/prodotto.php';
+include_once __DIR__ . '/../traits/formati.php';
 
 class libro extends prodotto {
+  use Formato;
   public $pagine;
   public $copertina;
 

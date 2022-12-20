@@ -1,8 +1,11 @@
 <?php
 
 include_once __DIR__ . '/prodotto.php';
+include_once __DIR__ . '/../traits/formati.php';
 
 class audioLibro extends prodotto{
+
+  use Formato;
   public $durata;
   public $piattaforma;
   public $link;
